@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: hsl(233, 47%, 7%);
+}
+
+main {
+    display: flex;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.contain {
+    background-color: hsl(244, 38%, 16%);
+    width: 530px;
+    padding: 60px;
+    border-radius: 7px 0 0 7px;
+}
+
+h1 , h2 {
+    font-family: 'Inter', sans-serif;
+    color: hsl(0, 0%, 100%);
+    margin-bottom: 20px;
+}
+
+span {
+    color: hsl(277, 64%, 61%);
+}
+
+p {
+    color: hsla(0, 0%, 100%, 0.75);
+    font-family: 'Lexend Deca', sans-serif;
+    line-height: 1.8;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-between;
+    width: 350px;
+    margin-top: 60px;
+}
+
+.flex .stats {
+    position: relative;
+    bottom: 20px;
+    text-transform: uppercase;
+}
+
+.image{
+    border-radius: 0 7px 7px 0;
+    background: linear-gradient(0deg, 
+    hsla(277, 64%, 61%, 0.5) 0%,
+    hsla(277, 64%, 61%, 0.5) 100%),
+    url(images/image-header-desktop.jpg);
+    background-size: cover;
+}
+
+.image div{
+    width: 550px;
+    height: 400px;
+}
+
+@media (max-width:1150px) {
+    main{
+        flex-direction: column-reverse;
+    }
+    .contain{
+        border-radius: 0 0 7px 7px;
+        margin-bottom: 200px;
+    }
+    .image{
+        width: 530px;
+        margin-top: 300px;
+        border-radius: 7px 7px 0 0;
+    }
+    p,h1,h2{
+        text-align: center;
+    }
+    .flex {
+        flex-direction: column;
+        margin: 30px;
+    }
+    .image div{
+        height: 300px;
+        margin: 0 200px;
+    }
+}
